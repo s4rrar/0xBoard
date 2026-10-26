@@ -9,15 +9,23 @@ if (process.env.NODE_ENV === "production") {
 
 const APP_NAME = process.env.VITE_APP_NAME || "0xBoard";
 
+// Ensure resources/node.exe is prepared
+try {
+  require("./prepare-node.js");
+} catch (e) {
+  console.warn("Could not prepare node resource:", e);
+}
+
 async function build() {
   const isDev = process.argv.includes("--watch");
 
-  console.log(`Building Electron main and preload scripts for ${APP_NAME}...`);
+  console.log(`Building Electron main, preload, and server scripts for ${APP_NAME}...`);
 
   const buildOptions = {
     entryPoints: [
       path.resolve(__dirname, "../excalidraw-app/electron/main.ts"),
       path.resolve(__dirname, "../excalidraw-app/electron/preload.ts"),
+      path.resolve(__dirname, "../excalidraw-app/electron/server.ts"),
     ],
     bundle: true,
     platform: "node",

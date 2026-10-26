@@ -24,6 +24,17 @@ module.exports = {
     buildResources: "public",
   },
   files: ["dist-electron/**/*", "excalidraw-app/build/**/*", "public/**/*"],
+  extraResources: [
+    {
+      from: "resources/node.exe",
+      to: "node.exe",
+    },
+    {
+      from: "dist-electron/server.js",
+      to: "server.js",
+    },
+  ],
+  asarUnpack: ["excalidraw-app/build/**/*"],
   extraMetadata: {
     name: `${appSlug}-desktop`,
     version: "1.0.0",

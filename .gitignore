@@ -38,3 +38,5 @@ meta*.json
 .claude
 dist-electron
 dist-desktop
+resources/*.exe
+resources/node.exe

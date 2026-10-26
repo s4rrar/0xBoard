@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import { spawn, type ChildProcess } from "child_process";
 import { app, BrowserWindow, dialog, ipcMain, Menu, shell } from "electron";
 import { buildApplicationMenu } from "./menu";
 import { WindowStateManager } from "./windowState";
@@ -15,6 +16,8 @@ let windowStateManager: WindowStateManager | null = null;
 let recentFiles: string[] = [];
 let initialFilePath: string | null = null;
 let isQuitting = false;
+let nodeServerProcess: ChildProcess | null = null;
+let nodeServerUrl: string | null = null;
 
 const APP_NAME = process.env.VITE_APP_NAME || "0xBoard";
 
@@ -191,6 +194,148 @@ function getIndexPath(): string {
   return candidates[0];
 }
 
+function findNodeBinary(): string | null {
+  const candidates = [
+    // Production packaged resources
+    path.join(process.resourcesPath, "node.exe"),
+    path.join(process.resourcesPath, "bin", "node.exe"),
+    path.join(app.getAppPath(), "..", "node.exe"),
+    // Development / local root
+    path.resolve(__dirname, "../../resources/node.exe"),
+    path.resolve(__dirname, "../resources/node.exe"),
+    path.resolve(process.cwd(), "resources/node.exe"),
+    // Current Node execution path fallback
+    process.execPath,
+  ];
+
+  for (const candidate of candidates) {
+    if (
+      candidate &&
+      fs.existsSync(candidate) &&
+      path.basename(candidate).toLowerCase() === "node.exe"
+    ) {
+      return candidate;
+    }
+  }
+  return null;
+}
+
+function findServerScript(): string | null {
+  const candidates = [
+    // Production extraResources
+    path.join(process.resourcesPath, "server.js"),
+    path.join(__dirname, "server.js"),
+    path.join(app.getAppPath(), "dist-electron", "server.js"),
+    path.resolve(__dirname, "../dist-electron/server.js"),
+    path.resolve(process.cwd(), "dist-electron/server.js"),
+  ];
+
+  for (const candidate of candidates) {
+    if (candidate && fs.existsSync(candidate)) {
+      return candidate;
+    }
+  }
+  return null;
+}
+
+function stopNodeServer() {
+  if (nodeServerProcess) {
+    try {
+      if (process.platform === "win32" && nodeServerProcess.pid) {
+        spawn("taskkill", ["/pid", String(nodeServerProcess.pid), "/f", "/t"]);
+      } else {
+        nodeServerProcess.kill("SIGTERM");
+      }
+    } catch (e) {
+      // ignore
+    }
+    nodeServerProcess = null;
+  }
+}
+
+async function startNodeServer(): Promise<string | null> {
+  if (nodeServerUrl) {
+    return nodeServerUrl;
+  }
+
+  const nodeExe = findNodeBinary();
+  const serverScript = findServerScript();
+
+  if (!nodeExe || !serverScript) {
+    console.warn(
+      "[NodeServer] node.exe or server.js not found, falling back to direct file load.",
+    );
+    return null;
+  }
+
+  return new Promise((resolve) => {
+    let resolved = false;
+    const timeout = setTimeout(() => {
+      if (!resolved) {
+        resolved = true;
+        console.warn(
+          "[NodeServer] Server startup timed out, falling back to direct file load.",
+        );
+        resolve(null);
+      }
+    }, 6000);
+
+    try {
+      console.log(`[NodeServer] Starting instance with: ${nodeExe} ${serverScript}`);
+      const proc = spawn(
+        nodeExe,
+        [serverScript, "--parent-pid", String(process.pid), "--port", "0"],
+        {
+          windowsHide: true,
+          env: {
+            ...process.env,
+            ELECTRON_RUN_AS_NODE: undefined,
+          },
+        },
+      );
+
+      nodeServerProcess = proc;
+
+      proc.stdout?.on("data", (chunk: Buffer) => {
+        const text = chunk.toString();
+        const match = text.match(/0XBOARD_SERVER_READY:(http:\/\/[^\s\r\n]+)/);
+        if (match && !resolved) {
+          resolved = true;
+          clearTimeout(timeout);
+          nodeServerUrl = match[1];
+          console.log(`[NodeServer] Ready at ${nodeServerUrl}`);
+          resolve(nodeServerUrl);
+        }
+      });
+
+      proc.stderr?.on("data", (chunk: Buffer) => {
+        console.error(`[NodeServer Error] ${chunk.toString().trim()}`);
+      });
+
+      proc.on("error", (err) => {
+        console.error("[NodeServer] Failed to spawn node.exe:", err);
+        if (!resolved) {
+          resolved = true;
+          clearTimeout(timeout);
+          resolve(null);
+        }
+      });
+
+      proc.on("exit", (code) => {
+        console.log(`[NodeServer] Process exited with code ${code}`);
+        nodeServerProcess = null;
+      });
+    } catch (err) {
+      console.error("[NodeServer] Error spawning server:", err);
+      if (!resolved) {
+        resolved = true;
+        clearTimeout(timeout);
+        resolve(null);
+      }
+    }
+  });
+}
+
 function createWindow() {
   windowStateManager = new WindowStateManager();
   const windowState = windowStateManager.getState();
@@ -224,8 +369,14 @@ function createWindow() {
   if (devServerUrl) {
     mainWindow.loadURL(devServerUrl);
   } else {
-    // In production, load the built HTML
-    mainWindow.loadFile(getIndexPath());
+    startNodeServer().then((url) => {
+      if (url && mainWindow && !mainWindow.isDestroyed()) {
+        mainWindow.loadURL(url);
+      } else if (mainWindow && !mainWindow.isDestroyed()) {
+        // Fallback to direct file loading if node server isn't available
+        mainWindow.loadFile(getIndexPath());
+      }
+    });
   }
 
   // Handle external links securely
@@ -504,7 +655,21 @@ app.whenReady().then(() => {
 });
 
 app.on("window-all-closed", () => {
+  stopNodeServer();
   if (process.platform !== "darwin") {
     app.quit();
   }
 });
+
+app.on("before-quit", () => {
+  stopNodeServer();
+});
+
+app.on("will-quit", () => {
+  stopNodeServer();
+});
+
+process.on("exit", () => {
+  stopNodeServer();
+});
+
