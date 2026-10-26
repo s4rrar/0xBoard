@@ -539,6 +539,15 @@
     }
   },
   "sourcecode": "Dáslepki kodtı kóriw",
+  "aboutDialog": {
+      "title": "{{appName}} haqqında",
+      "version": "Versiyası",
+      "desc": "Biybiykar, jeke ha'm oflayn virtual doska qosımshası.",
+      "developer": "Islep shıǵıwshı",
+      "credits": "Ashıq kodlı Excalidraw tiykarında",
+      "privacy": "100% Jeke ha'm Oflayn",
+      "close": "Jabıw"
+  },
   "stats": {
     "angle": "",
     "shapes": "",

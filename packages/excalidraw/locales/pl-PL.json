@@ -539,6 +539,15 @@
     }
   },
   "sourcecode": "Wyświetl kod źródłowy",
+  "aboutDialog": {
+      "title": "O programie {{appName}}",
+      "version": "Wersja",
+      "desc": "Bezpłatna, prywatna i działająca w trybie offline wirtualna tablica.",
+      "developer": "Autor",
+      "credits": "Oparto na otwartym oprogramowaniu Excalidraw",
+      "privacy": "100% Prywatne i Offline",
+      "close": "Zamknij"
+  },
   "stats": {
     "angle": "Kąt",
     "shapes": "Kształty",

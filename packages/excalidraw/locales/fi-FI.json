@@ -539,6 +539,15 @@
     }
   },
   "sourcecode": "Näytä lähdekoodi",
+  "aboutDialog": {
+      "title": "Tietoja sovelluksesta {{appName}}",
+      "version": "Versio",
+      "desc": "Ilmainen, yksityinen ja offline-tilassa toimiva virtuaalinen valkotaulusovellus.",
+      "developer": "Kehittäjä",
+      "credits": "Perustuu avoimen lähdekoodin Excalidraw-projektiin",
+      "privacy": "100% Yksityinen ja Offline",
+      "close": "Sulje"
+  },
   "stats": {
     "angle": "Kulma",
     "shapes": "",

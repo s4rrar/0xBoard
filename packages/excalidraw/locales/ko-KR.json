@@ -539,6 +539,15 @@
     }
   },
   "sourcecode": "소스 코드 보기",
+  "aboutDialog": {
+      "title": "{{appName}} 정보",
+      "version": "버전",
+      "desc": "무료이며 안전하고 오프라인 우선으로 작동하는 가상 화이트보드 애플리케이션입니다.",
+      "developer": "개발자",
+      "credits": "오픈 소스 Excalidraw 기반",
+      "privacy": "100% 개인 정보 보호 및 오프라인",
+      "close": "닫기"
+  },
   "stats": {
     "angle": "각도",
     "shapes": "",

@@ -539,6 +539,15 @@
     }
   },
   "sourcecode": "Visa källkod",
+  "aboutDialog": {
+      "title": "Om {{appName}}",
+      "version": "Version",
+      "desc": "En gratis, privat och offline-först virtuell whiteboard-applikation.",
+      "developer": "Utvecklare",
+      "credits": "Baserad på öppen källkod från Excalidraw",
+      "privacy": "100% Privat och Offline",
+      "close": "Stäng"
+  },
   "stats": {
     "angle": "Vinkel",
     "shapes": "Former",

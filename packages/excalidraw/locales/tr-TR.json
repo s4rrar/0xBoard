@@ -539,6 +539,15 @@
     }
   },
   "sourcecode": "Kaynak kodunu görüntüle",
+  "aboutDialog": {
+      "title": "{{appName}} Hakkında",
+      "version": "Sürüm",
+      "desc": "Ücretsiz, gizliliğe önem veren ve çevrimdışı öncelikli sanal beyaz tahta uygulaması.",
+      "developer": "Geliştirici",
+      "credits": "Açık kaynaklı Excalidraw tabanlıdır",
+      "privacy": "%100 Gizli ve Çevrimdışı",
+      "close": "Kapat"
+  },
   "stats": {
     "angle": "Açı",
     "shapes": "Şekiller",

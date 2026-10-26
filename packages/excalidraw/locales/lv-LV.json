@@ -539,6 +539,15 @@
     }
   },
   "sourcecode": "Skatīt pirmkodu",
+  "aboutDialog": {
+      "title": "Par {{appName}}",
+      "version": "Versija",
+      "desc": "Bezmaksas, privāta un bezsaistē strādājoša virtuālās tāfeles lietotne.",
+      "developer": "Izstrādātājs",
+      "credits": "Balstīts uz atvērtā koda Excalidraw",
+      "privacy": "100% Privāts un Bezsaistē",
+      "close": "Aizvērt"
+  },
   "stats": {
     "angle": "Leņķis",
     "shapes": "",

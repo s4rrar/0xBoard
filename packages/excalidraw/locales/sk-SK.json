@@ -539,6 +539,15 @@
     }
   },
   "sourcecode": "Zobraziť zdrojový kód",
+  "aboutDialog": {
+      "title": "O aplikácii {{appName}}",
+      "version": "Verzia",
+      "desc": "Bezplatná, súkromná a offline aplikácia pre virtuálnu tabuľu.",
+      "developer": "Vývojár",
+      "credits": "Založené na open-source projekte Excalidraw",
+      "privacy": "100% Súkromné a Offline",
+      "close": "Zavrieť"
+  },
   "stats": {
     "angle": "Uhol",
     "shapes": "Tvary",

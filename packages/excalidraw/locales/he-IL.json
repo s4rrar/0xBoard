@@ -539,6 +539,15 @@
     }
   },
   "sourcecode": "הצגת קוד המקור",
+  "aboutDialog": {
+      "title": "אודות {{appName}}",
+      "version": "גרסה",
+      "desc": "אפליקציית לוח וירטואלי חינמית, פרטית ובעלת עבודה לא מקוונת.",
+      "developer": "מפתח",
+      "credits": "מבוסס על Excalidraw בקוד פתוח",
+      "privacy": "100% פרטי וללא חיבור",
+      "close": "סגירה"
+  },
   "stats": {
     "angle": "זווית",
     "shapes": "צורות",

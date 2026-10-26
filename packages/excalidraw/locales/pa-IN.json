@@ -539,6 +539,15 @@
     }
   },
   "sourcecode": "ਸਰੋਤ ਕੋਡ ਵੇਖੋ",
+  "aboutDialog": {
+      "title": "{{appName}} ਬਾਰੇ",
+      "version": "ਵਰਜ਼ਨ",
+      "desc": "ਇੱਕ ਮੁਫ਼ਤ, ਨਿੱਜੀ ਅਤੇ ਔਫਲਾਈਨ ਵਰਚੁਅਲ ਵ੍ਹਾਈਟਬੋਰਡ ਐਪਲੀਕੇਸ਼ਨ।",
+      "developer": "ਡਿਵੈਲਪਰ",
+      "credits": "ਓਪਨ-ਸੋਰਸ Excalidraw 'ਤੇ ਅਧਾਰਤ",
+      "privacy": "100% ਨਿੱਜੀ ਅਤੇ ਔਫਲਾਈਨ",
+      "close": "ਬੰਦ ਕਰੋ"
+  },
   "stats": {
     "angle": "ਕੋਣ",
     "shapes": "",

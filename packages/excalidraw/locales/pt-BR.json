@@ -539,6 +539,15 @@
     }
   },
   "sourcecode": "Ver código-fonte",
+  "aboutDialog": {
+      "title": "Sobre o {{appName}}",
+      "version": "Versão",
+      "desc": "Um aplicativo de lousa virtual gratuito, privado e focado no uso offline.",
+      "developer": "Desenvolvedor",
+      "credits": "Baseado no projeto de código aberto Excalidraw",
+      "privacy": "100% Privado e Offline",
+      "close": "Fechar"
+  },
   "stats": {
     "angle": "Ângulo",
     "shapes": "Formas",

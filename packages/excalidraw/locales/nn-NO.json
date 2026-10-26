@@ -539,6 +539,15 @@
     }
   },
   "sourcecode": "Vis kjeldekode",
+  "aboutDialog": {
+      "title": "Om {{appName}}",
+      "version": "Versjon",
+      "desc": "Ein gratis, privat og fråkopla virtuell tavleapplikasjon.",
+      "developer": "Utviklar",
+      "credits": "Basert på open kjeldekode Excalidraw",
+      "privacy": "100% Privat og Fråkopla",
+      "close": "Lukk"
+  },
   "stats": {
     "angle": "Vinkel",
     "shapes": "",

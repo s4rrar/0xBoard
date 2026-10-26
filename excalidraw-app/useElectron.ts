@@ -41,6 +41,8 @@ export function useElectron({
   const lastSavedSceneRef = useRef<string | null>(null);
   const isInitialLoadRef = useRef(true);
 
+  const [isAboutDialogOpen, setIsAboutDialogOpen] = useState(false);
+
   // Sync window title and dirty indicator with Electron main process
   const updateWindowState = useCallback(
     (filePath: string | null, dirty: boolean) => {
@@ -404,13 +406,7 @@ export function useElectron({
           break;
         }
         case "about": {
-          const version = window.electronAPI
-            ? await window.electronAPI.getAppVersion()
-            : "1.0.0";
-          excalidrawAPI.setToast({
-            message: `${APP_NAME} Desktop v${version}`,
-            duration: 3000,
-          });
+          setIsAboutDialogOpen(true);
           break;
         }
       }
@@ -563,6 +559,8 @@ export function useElectron({
     isElectron: !!window.electronAPI,
     activeFilePath,
     isDirty,
+    isAboutDialogOpen,
+    setIsAboutDialogOpen,
     onSceneChange,
     handleNewFile,
     handleOpenFile,

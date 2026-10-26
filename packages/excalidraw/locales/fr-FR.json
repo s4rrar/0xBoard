@@ -539,6 +539,15 @@
     }
   },
   "sourcecode": "Voir le code source",
+  "aboutDialog": {
+      "title": "À propos de {{appName}}",
+      "version": "Version",
+      "desc": "Une application de tableau blanc virtuel gratuite, privée et hors ligne.",
+      "developer": "Développeur",
+      "credits": "Basé sur le logiciel open-source Excalidraw",
+      "privacy": "100% Privé et Hors-ligne",
+      "close": "Fermer"
+  },
   "stats": {
     "angle": "Angle",
     "shapes": "Formes",

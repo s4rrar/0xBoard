@@ -539,6 +539,15 @@
     }
   },
   "sourcecode": "Lihat kode sumber",
+  "aboutDialog": {
+      "title": "Tentang {{appName}}",
+      "version": "Versi",
+      "desc": "Aplikasi papan tulis virtual gratis, privat, dan berfungsi luring.",
+      "developer": "Pengembang",
+      "credits": "Berdasarkan Excalidraw sumber terbuka",
+      "privacy": "100% Privat & Luring",
+      "close": "Tutup"
+  },
   "stats": {
     "angle": "Sudut",
     "shapes": "Bentuk",

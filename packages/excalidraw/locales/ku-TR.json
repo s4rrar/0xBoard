@@ -539,6 +539,15 @@
     }
   },
   "sourcecode": "Koda çavkaniyê bibîne",
+  "aboutDialog": {
+      "title": "Der barê {{appName}} de",
+      "version": "Guherto",
+      "desc": "Sepana tabloya spî ya virtual a belaş, taybet û negirêdayî.",
+      "developer": "Pêşvebir",
+      "credits": "Li ser bingeha Excalidraw a çavkaniya vekirî",
+      "privacy": "%100 Taybet û Negirêdayî",
+      "close": "Bigire"
+  },
   "stats": {
     "angle": "گۆشە",
     "shapes": "",

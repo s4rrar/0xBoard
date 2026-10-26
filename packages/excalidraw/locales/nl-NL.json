@@ -539,6 +539,15 @@
     }
   },
   "sourcecode": "Broncode bekijken",
+  "aboutDialog": {
+      "title": "Over {{appName}}",
+      "version": "Versie",
+      "desc": "Een gratis, privé en offline-eerst virtuele whiteboard-applicatie.",
+      "developer": "Ontwikkelaar",
+      "credits": "Gebaseerd op open-source Excalidraw",
+      "privacy": "100% Privé en Offline",
+      "close": "Sluiten"
+  },
   "stats": {
     "angle": "Hoek",
     "shapes": "Vormen",

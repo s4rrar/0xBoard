@@ -539,6 +539,15 @@
     }
   },
   "sourcecode": "Ver código fuente",
+  "aboutDialog": {
+      "title": "Acerca de {{appName}}",
+      "version": "Versión",
+      "desc": "Una aplicación de pizarra virtual gratuita, privada y sin conexión.",
+      "developer": "Desarrollador",
+      "credits": "Basado en el código abierto de Excalidraw",
+      "privacy": "100% Privado y Sin Conexión",
+      "close": "Cerrar"
+  },
   "stats": {
     "angle": "Ángulo",
     "shapes": "Formas",

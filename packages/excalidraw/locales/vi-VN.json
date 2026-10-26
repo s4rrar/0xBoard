@@ -539,6 +539,15 @@
     }
   },
   "sourcecode": "Xem mã nguồn",
+  "aboutDialog": {
+      "title": "Giới thiệu về {{appName}}",
+      "version": "Phiên bản",
+      "desc": "Ứng dụng bảng trắng ảo miễn phí, riêng tư và hoạt động ngoại tuyến.",
+      "developer": "Nhà phát triển",
+      "credits": "Dựa trên mã nguồn mở Excalidraw",
+      "privacy": "100% Riêng tư & Ngoại tuyến",
+      "close": "Đóng"
+  },
   "stats": {
     "angle": "Góc",
     "shapes": "",

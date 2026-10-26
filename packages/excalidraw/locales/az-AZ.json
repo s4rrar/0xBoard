@@ -539,6 +539,15 @@
     }
   },
   "sourcecode": "Mənbə koduna baxın",
+  "aboutDialog": {
+      "title": "{{appName}} haqqında",
+      "version": "Versiya",
+      "desc": "Pulsuz, şəxsi və oflayn işləyən virtual lövhə tətbiqi.",
+      "developer": "Tərtibatçı",
+      "credits": "Açıq mənbəli Excalidraw əsasında",
+      "privacy": "100% Şəxsi və Oflayn",
+      "close": "Bağla"
+  },
   "stats": {
     "angle": "",
     "shapes": "",

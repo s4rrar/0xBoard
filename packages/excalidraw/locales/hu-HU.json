@@ -539,6 +539,15 @@
     }
   },
   "sourcecode": "Forráskód megtekintése",
+  "aboutDialog": {
+      "title": "A(z) {{appName}} névjegye",
+      "version": "Verzió",
+      "desc": "Egy ingyenes, privát és offline működő virtuális fehértábla alkalmazás.",
+      "developer": "Fejlesztő",
+      "credits": "A nyílt forráskódú Excalidraw alapján",
+      "privacy": "100% Privát és Offline",
+      "close": "Bezárás"
+  },
   "stats": {
     "angle": "Szög",
     "shapes": "Alakzatok",

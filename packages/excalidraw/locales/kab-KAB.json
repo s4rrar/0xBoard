@@ -539,6 +539,15 @@
     }
   },
   "sourcecode": "Wali tangalt taɣbalut",
+  "aboutDialog": {
+      "title": "Ɣef {{appName}}",
+      "version": "Lqem",
+      "desc": "Asnas n tfelwit tarumant baṭel, tusligt yerna teqqen ur teqqin ara.",
+      "developer": "Amedday",
+      "credits": "Irs ɣef Excalidraw aɣbalu yeldin",
+      "privacy": "100% D tusligt & Beṛṛa n tuqqna",
+      "close": "Mdel"
+  },
   "stats": {
     "angle": "Tiɣmeṛt",
     "shapes": "",

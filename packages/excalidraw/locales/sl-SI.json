@@ -539,6 +539,15 @@
     }
   },
   "sourcecode": "Ogled izvorne kode",
+  "aboutDialog": {
+      "title": "O programu {{appName}}",
+      "version": "Različica",
+      "desc": "Brezplačna, zasebna in brez povezave delujoča virtualna tabla.",
+      "developer": "Razvijalec",
+      "credits": "Temelji na odprtokodnem projektu Excalidraw",
+      "privacy": "100% Zasebno in Brez povezave",
+      "close": "Zapri"
+  },
   "stats": {
     "angle": "Kot",
     "shapes": "Oblike",

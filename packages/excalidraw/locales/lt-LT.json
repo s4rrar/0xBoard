@@ -539,6 +539,15 @@
     }
   },
   "sourcecode": "Peržiūrėti pirminį kodą",
+  "aboutDialog": {
+      "title": "Apie {{appName}}",
+      "version": "Versija",
+      "desc": "Nemokama, privati ir neprisijungus veikianti virtualios lentos programa.",
+      "developer": "Kūrėjas",
+      "credits": "Sukurta atvirojo kodo Excalidraw pagrindu",
+      "privacy": "100% Privatu ir Neprisijungus",
+      "close": "Uždaryti"
+  },
   "stats": {
     "angle": "",
     "shapes": "",

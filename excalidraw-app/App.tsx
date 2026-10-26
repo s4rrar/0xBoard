@@ -92,6 +92,7 @@ import { AppFooter } from "./components/AppFooter";
 import { AppMainMenu } from "./components/AppMainMenu";
 import { AppWelcomeScreen } from "./components/AppWelcomeScreen";
 import { TopErrorBoundary } from "./components/TopErrorBoundary";
+import { AboutDialog } from "./components/AboutDialog";
 
 import { isCollaborationLink } from "./data";
 
@@ -690,6 +691,10 @@ const ExcalidrawWrapper = () => {
           <ErrorDialog onClose={() => setErrorMessage("")}>
             {errorMessage}
           </ErrorDialog>
+        )}
+
+        {electron.isAboutDialogOpen && (
+          <AboutDialog onClose={() => electron.setIsAboutDialogOpen(false)} />
         )}
 
         <CommandPalette

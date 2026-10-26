@@ -539,6 +539,15 @@
     }
   },
   "sourcecode": "Mostra el codi font",
+  "aboutDialog": {
+      "title": "Quant a {{appName}}",
+      "version": "Versió",
+      "desc": "Una aplicació de pissarra virtual gratuïta, privada i fora de línia.",
+      "developer": "Desenvolupador",
+      "credits": "Basat en Excalidraw de codi obert",
+      "privacy": "100% Privat i Fora de línia",
+      "close": "Tanca"
+  },
   "stats": {
     "angle": "Angle",
     "shapes": "Formes",

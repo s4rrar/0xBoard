@@ -539,6 +539,15 @@
     }
   },
   "sourcecode": "Visualizza codice sorgente",
+  "aboutDialog": {
+      "title": "Informazioni su {{appName}}",
+      "version": "Versione",
+      "desc": "Un'applicazione di lavagna virtuale gratuita, privata e offline.",
+      "developer": "Sviluppatore",
+      "credits": "Basato sull'open source Excalidraw",
+      "privacy": "100% Privato & Offline",
+      "close": "Chiudi"
+  },
   "stats": {
     "angle": "Angolo",
     "shapes": "Forme",

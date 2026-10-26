@@ -539,6 +539,15 @@
     }
   },
   "sourcecode": "檢視原始碼",
+  "aboutDialog": {
+      "title": "關於 {{appName}}",
+      "version": "版本",
+      "desc": "一款免費、隱私且支援離線優先的虛擬白板應用程式。",
+      "developer": "開發者",
+      "credits": "基於開源的 Excalidraw 專案構建",
+      "privacy": "100% 隱私且離線",
+      "close": "關閉"
+  },
   "stats": {
     "angle": "角度",
     "shapes": "形狀",

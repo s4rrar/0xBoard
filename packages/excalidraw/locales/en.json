@@ -555,6 +555,15 @@
     }
   },
   "sourcecode": "View source code",
+  "aboutDialog": {
+      "title": "About {{appName}}",
+      "version": "Version",
+      "desc": "A free, private, and offline-first virtual whiteboard application.",
+      "developer": "Developer",
+      "credits": "Based on open-source Excalidraw",
+      "privacy": "100% Private & Offline",
+      "close": "Close"
+  },
   "stats": {
     "angle": "Angle",
     "shapes": "Shapes",

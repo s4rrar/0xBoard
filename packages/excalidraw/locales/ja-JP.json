@@ -539,6 +539,15 @@
     }
   },
   "sourcecode": "ソースコードを表示",
+  "aboutDialog": {
+      "title": "{{appName}} について",
+      "version": "バージョン",
+      "desc": "無料、プライベート、オフラインで使えるバーチャルホワイトボードアプリ。",
+      "developer": "開発者",
+      "credits": "オープンソースの Excalidraw をベースに開発",
+      "privacy": "100% プライベート＆オフライン",
+      "close": "閉じる"
+  },
   "stats": {
     "angle": "角度",
     "shapes": "図形",

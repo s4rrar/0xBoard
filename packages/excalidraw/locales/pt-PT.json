@@ -539,6 +539,15 @@
     }
   },
   "sourcecode": "Ver código-fonte",
+  "aboutDialog": {
+      "title": "Sobre o {{appName}}",
+      "version": "Versão",
+      "desc": "Uma aplicação de quadro virtual gratuita, privada e que funciona offline.",
+      "developer": "Desenvolvedor",
+      "credits": "Baseado no projeto open-source Excalidraw",
+      "privacy": "100% Privado e Offline",
+      "close": "Fechar"
+  },
   "stats": {
     "angle": "Ângulo",
     "shapes": "Formas",

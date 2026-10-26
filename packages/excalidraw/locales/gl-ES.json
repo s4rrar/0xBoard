@@ -539,6 +539,15 @@
     }
   },
   "sourcecode": "Ver o código fonte",
+  "aboutDialog": {
+      "title": "Acerca de {{appName}}",
+      "version": "Versión",
+      "desc": "Unha aplicación de encerado virtual gratuíta, privada e fóra de liña.",
+      "developer": "Desenvolvedor",
+      "credits": "Baseado en Excalidraw de código aberto",
+      "privacy": "100% Privado e Fóra de liña",
+      "close": "Pechar"
+  },
   "stats": {
     "angle": "Ángulo",
     "shapes": "",

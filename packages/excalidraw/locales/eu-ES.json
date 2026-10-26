@@ -539,6 +539,15 @@
     }
   },
   "sourcecode": "Ikusi iturburu-kodea",
+  "aboutDialog": {
+      "title": "{{appName}}ri buruz",
+      "version": "Bertsioa",
+      "desc": "Doako arbeil birtualeko aplikazioa, pribatua eta lineaz kanpokoa.",
+      "developer": "Garatzailea",
+      "credits": "Excalidraw kode irekian oinarritua",
+      "privacy": "%100 Pribatua eta Lineaz kanpokoa",
+      "close": "Itxi"
+  },
   "stats": {
     "angle": "Angelua",
     "shapes": "Formak",

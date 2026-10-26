@@ -539,6 +539,15 @@
     }
   },
   "sourcecode": "Manba kodini ko'rish",
+  "aboutDialog": {
+      "title": "{{appName}} haqida",
+      "version": "Versiya",
+      "desc": "Bepul, xususiy va oflayn ishlaydigan virtual doska ilovasi.",
+      "developer": "Dasturchi",
+      "credits": "Ochiq manbali Excalidraw asosida yaratilgan",
+      "privacy": "100% Xususiy va Oflayn",
+      "close": "Yopish"
+  },
   "stats": {
     "angle": "",
     "shapes": "",

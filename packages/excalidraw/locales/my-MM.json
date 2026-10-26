@@ -539,6 +539,15 @@
     }
   },
   "sourcecode": "ရင်းမြစ်ကုဒ် ကြည့်ရန်",
+  "aboutDialog": {
+      "title": "{{appName}} အကြောင်း",
+      "version": "ဗားရှင်း",
+      "desc": "အခမဲ့၊ သီးသန့်ဖြစ်ပြီး အော့ဖ်လိုင်းအသုံးပြုနိုင်သော whiteboard အက်ပ်။",
+      "developer": "ဖန်တီးသူ",
+      "credits": "Open-source Excalidraw ပေါ်တွင် အခြေခံထားသည်",
+      "privacy": "၁၀၀% သီးသန့်နှင့် အော့ဖ်လိုင်း",
+      "close": "ပိတ်ရန်"
+  },
   "stats": {
     "angle": "ထောင့်",
     "shapes": "",

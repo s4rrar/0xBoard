@@ -539,6 +539,15 @@
     }
   },
   "sourcecode": "Vizualizare cod sursă",
+  "aboutDialog": {
+      "title": "Despre {{appName}}",
+      "version": "Versiune",
+      "desc": "O aplicație de tablă virtuală gratuită, privată și funcțională offline.",
+      "developer": "Dezvoltator",
+      "credits": "Bazat pe proiectul open-source Excalidraw",
+      "privacy": "100% Privat și Offline",
+      "close": "Închide"
+  },
   "stats": {
     "angle": "Unghi",
     "shapes": "Forme",

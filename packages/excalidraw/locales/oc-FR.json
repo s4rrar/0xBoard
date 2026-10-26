@@ -539,6 +539,15 @@
     }
   },
   "sourcecode": "Veire lo còdi font",
+  "aboutDialog": {
+      "title": "A prepaus de {{appName}}",
+      "version": "Version",
+      "desc": "Una aplicacion de tablèu blanc virtual gratuita, privada e fòra linha.",
+      "developer": "Desvolopaire",
+      "credits": "Basat sus Excalidraw de font dobèrta",
+      "privacy": "100% Privat e Fòra linha",
+      "close": "Tampar"
+  },
   "stats": {
     "angle": "Angle",
     "shapes": "Fòrmas",

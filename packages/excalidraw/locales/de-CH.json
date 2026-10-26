@@ -539,6 +539,15 @@
     }
   },
   "sourcecode": "Quellcode anzeigen",
+  "aboutDialog": {
+      "title": "Über {{appName}}",
+      "version": "Version",
+      "desc": "Eine kostenlose, private und offlinefähige virtuelle Whiteboard-Anwendung.",
+      "developer": "Entwickler",
+      "credits": "Basierend auf Open-Source-Excalidraw",
+      "privacy": "100% Privat & Offline",
+      "close": "Schliessen"
+  },
   "stats": {
     "angle": "Winkel",
     "shapes": "Formen",
