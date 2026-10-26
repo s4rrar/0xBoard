@@ -1,0 +1,55 @@
+{
+  "$schema": "https://raw.githubusercontent.com/electron-userland/electron-builder/master/packages/app-builder-lib/scheme.json",
+  "appId": "com.0xboard.desktop",
+  "productName": "0xBoard",
+  "directories": {
+    "output": "dist-desktop",
+    "buildResources": "public"
+  },
+  "files": ["dist-electron/**/*", "excalidraw-app/build/**/*", "public/**/*"],
+  "extraMetadata": {
+    "name": "0xboard-desktop",
+    "version": "1.0.0",
+    "description": "0xBoard Whiteboard Desktop Application",
+    "author": "0xBoard",
+    "main": "dist-electron/main.js"
+  },
+  "fileAssociations": [
+    {
+      "ext": "excalidraw",
+      "name": "0xBoard Drawing",
+      "description": "0xBoard whiteboard drawing file",
+      "role": "Editor"
+    }
+  ],
+  "win": {
+    "target": [
+      {
+        "target": "nsis",
+        "arch": ["x64"]
+      },
+      {
+        "target": "portable",
+        "arch": ["x64"]
+      }
+    ],
+    "icon": "public/android-chrome-512x512.png"
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
+    "shortcutName": "0xBoard"
+  },
+  "mac": {
+    "target": ["dmg", "zip"],
+    "category": "public.app-category.graphics-design",
+    "icon": "public/android-chrome-512x512.png"
+  },
+  "linux": {
+    "target": ["AppImage", "deb"],
+    "category": "Graphics",
+    "icon": "public/android-chrome-512x512.png"
+  }
+}

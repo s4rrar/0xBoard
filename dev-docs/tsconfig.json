@@ -1,0 +1,15 @@
+{
+  // This file is not used in compilation. It is here just for a nice editor experience.
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "jsx": "react",
+    "allowJs": true,
+    "lib": ["DOM", "ESNext"],
+    "skipLibCheck": true,
+    "strict": false
+  },
+  "include": ["docs/**/*"]
+}
