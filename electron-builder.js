@@ -59,6 +59,9 @@ module.exports = {
     createStartMenuShortcut: true,
     shortcutName: appName,
   },
+  portable: {
+    artifactName: "${productName} Portable ${version}.${ext}",
+  },
   mac: {
     target: ["dmg", "zip"],
     category: "public.app-category.graphics-design",
